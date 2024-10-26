@@ -78,7 +78,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="navbar-end md:no-wrap wrap">
-          <form className="md:block hidden" onSubmit={handleSubmit((val)=>searchNow(val``))}>
+          <form className="md:block hidden" onSubmit={handleSubmit((val)=>searchNow(val))}>
             <input
               type="text"
               placeholder="Search"
