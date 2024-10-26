@@ -85,7 +85,7 @@ const Header = () => {
               {...register("search", {
                 required: "This field is required",
                 validate: {
-                  minLength: (v) => v.length >= 2 || "Too short",
+                  minLength: (v:string|null) => v.length >= 2 || "Too short",
                 },
               })}
               className="input input-bordered w-24 md:w-auto h-8"
