@@ -12,7 +12,7 @@ const Header = () => {
   const searchParams = useSearchParams();
   const globalStore: any = useGlobalSettingStore();
   const movieStore: any = useMovieStore();
-  const searchNow = (data: { search: string }) => {
+  const searchNow = (data: { search: string|any }) => {
     console.log(data);
     router.push("/?search=" + data?.search);
   };
@@ -78,7 +78,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="navbar-end md:no-wrap wrap">
-          <form className="md:block hidden" onSubmit={handleSubmit(searchNow)}>
+          <form className="md:block hidden" onSubmit={handleSubmit((val)=>searchNow(val``))}>
             <input
               type="text"
               placeholder="Search"
